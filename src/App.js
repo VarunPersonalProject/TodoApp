@@ -75,6 +75,10 @@ function App() {
     };
 
   useEffect(() => {
+    document.title = "My Todo App";
+  }, []);
+
+  useEffect(() => {
     localStorage.setItem(KEY, JSON.stringify(todoList));
     setTaskCount(todoList.length);
   }, [todoList]);
